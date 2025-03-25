@@ -1,0 +1,24 @@
+  555 5.952055098   127.0.0.17 → 127.0.0.5    NGAP 122 NGSetupRequest
+  557 5.959431324    127.0.0.5 → 127.0.0.17   NGAP 122 NGSetupResponse
+ 1625 77.073399830   127.0.0.17 → 127.0.0.5    NGAP/NAS-5GS 198 InitialUEMessage, Registration request [RRCEstablishmentCause=mo-Signalling]
+ 1626 77.073820206    127.0.0.5 → 127.0.0.17   NGAP/NAS-5GS 106 SACK (Ack=1, Arwnd=106496) , DownlinkNASTransport, Identity request
+ 1627 77.105710615   127.0.0.17 → 127.0.0.5    NGAP/NAS-5GS 146 SACK (Ack=1, Arwnd=106496) , UplinkNASTransport, Identity response
+ 1723 77.111121134    127.0.0.5 → 127.0.0.17   NGAP/NAS-5GS 146 SACK (Ack=2, Arwnd=106496) , DownlinkNASTransport, Authentication request
+ 1729 77.465715585   127.0.0.17 → 127.0.0.5    NGAP/NAS-5GS 134 UplinkNASTransport, Authentication response
+ 1775 77.469142769    127.0.0.5 → 127.0.0.17   NGAP/NAS-5GS 122 SACK (Ack=3, Arwnd=106496) , DownlinkNASTransport, Security mode command
+ 1776 77.495738954   127.0.0.17 → 127.0.0.5    NGAP/NAS-5GS 206 SACK (Ack=3, Arwnd=106496) , UplinkNASTransport
+ 1909 77.505030494    127.0.0.5 → 127.0.0.17   NGAP/NAS-5GS 242 SACK (Ack=4, Arwnd=106496) , InitialContextSetupRequest
+ 1916 79.195653382   127.0.0.17 → 127.0.0.5    NGAP 1666 UERadioCapabilityInfoIndication
+ 1918 79.400882062   127.0.0.17 → 127.0.0.5    NGAP/NAS-5GS 154 InitialContextSetupResponse, UplinkNASTransport
+ 1919 79.401133672    127.0.0.5 → 127.0.0.17   NGAP/NAS-5GS 142 SACK (Ack=7, Arwnd=106496) , DownlinkNASTransport
+ 1920 79.599203470   127.0.0.17 → 127.0.0.5    NGAP/NAS-5GS 206 SACK (Ack=5, Arwnd=106496) , UplinkNASTransport
+ 1943 79.601002200    127.0.0.5 → 127.0.0.17   NGAP/NAS-5GS 114 SACK (Ack=8, Arwnd=106496) , DownlinkNASTransport
+ 1973 81.475836256   127.0.0.17 → 127.0.0.5    NGAP/NAS-5GS 198 UplinkNASTransport
+ 1974 81.476111461    127.0.0.5 → 127.0.0.17   NGAP/NAS-5GS 114 SACK (Ack=9, Arwnd=106496) , DownlinkNASTransport
+ 2247 97.178340090   127.0.0.17 → 127.0.0.5    NGAP/NAS-5GS 162 InitialUEMessage, Service request [RRCEstablishmentCause=mo-Data]
+ 2248 97.178750530    127.0.0.5 → 127.0.0.17   NGAP 98 SACK (Ack=10, Arwnd=106496) , UEContextReleaseCommand [Cause: Nas=normal-release]
+ 2249 97.178788246    127.0.0.5 → 127.0.0.17   NGAP/NAS-5GS 1766 InitialContextSetupRequest
+ 2251 97.181594025   127.0.0.17 → 127.0.0.5    NGAP 82 UEContextReleaseComplete
+ 2253 97.385004001   127.0.0.17 → 127.0.0.5    NGAP/NAS-5GS 1998 UERadioCapabilityInfoIndication, InitialContextSetupResponse, UplinkNASTransport, UplinkNASTransport
+ 2255 97.385619348    127.0.0.5 → 127.0.0.17   NGAP/NAS-5GS 114 SACK (Ack=15, Arwnd=106496) , DownlinkNASTransport
+ 2265 97.386136602    127.0.0.5 → 127.0.0.17   NGAP/NAS-5GS 98 DownlinkNASTransport
