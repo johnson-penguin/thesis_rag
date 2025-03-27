@@ -1,0 +1,349 @@
+2024-05-24 12:35:57,822 RU State: poweroff
+2024-05-24 12:35:58,016 RU State: rustart
+2024-05-24 12:35:58,065 JURA_TX_reflv.json is exist!
+2024-05-24 12:35:58,069 Estimate coefficients from json file:
+	Freq = 3450000000 Hz
+	Bandwidth = 100MHz 
+	P0 (Slope) = 1.9215879610363262
+	P1 (Offset) = -29.227772838099725  
+2024-05-24 12:35:58,069 	Voltage MAX Error = 0.014929436056334566
+2024-05-24 12:35:58,070 	Voltage RMS Error = 0.01052810420332202
+2024-05-24 12:35:58,070 	Power MAX Error = 0.02868822459090481
+2024-05-24 12:35:58,070 	Power RMS Error = 0.020230678289637077
+2024-05-24 12:35:58,070 Estimate coefficients from json file:
+	Freq = 3630000000 Hz
+	Bandwidth = 100MHz 
+	P0 (Slope) = 1.896688563569461
+	P1 (Offset) = -29.413546858381938  
+2024-05-24 12:35:58,070 	Voltage MAX Error = 0.017161773662202506
+2024-05-24 12:35:58,071 	Voltage RMS Error = 0.010381642685154275
+2024-05-24 12:35:58,071 	Power MAX Error = 0.032550539835664694
+2024-05-24 12:35:58,071 	Power RMS Error = 0.019690742951996264
+2024-05-24 12:35:58,071 Power(IN) = 24.0 dBm, Voltage(OUT) = 589.0757315181477 mV
+2024-05-24 12:35:58,071 Port 0 apply auxadc_poly_coeffs P0 : 1.9214883634464588, P1: -29.228515934180855 from ATE
+2024-05-24 12:35:58,073 Estimate coefficients from json file:
+	Freq = 3450000000 Hz
+	Bandwidth = 100MHz 
+	P0 (Slope) = 1.926164153987366
+	P1 (Offset) = -29.312555278277493  
+2024-05-24 12:35:58,073 	Voltage MAX Error = 0.010716160032465893
+2024-05-24 12:35:58,073 	Voltage RMS Error = 0.005787287043157023
+2024-05-24 12:35:58,074 	Power MAX Error = 0.02064108332293202
+2024-05-24 12:35:58,074 	Power RMS Error = 0.01114726485136552
+2024-05-24 12:35:58,074 Estimate coefficients from json file:
+	Freq = 3630000000 Hz
+	Bandwidth = 100MHz 
+	P0 (Slope) = 1.8962637746089925
+	P1 (Offset) = -29.44369474600604  
+2024-05-24 12:35:58,074 	Voltage MAX Error = 0.003153872650958789
+2024-05-24 12:35:58,074 	Voltage RMS Error = 0.0017838456332880768
+2024-05-24 12:35:58,075 	Power MAX Error = 0.005980574457737475
+2024-05-24 12:35:58,075 	Power RMS Error = 0.0033826418538966635
+2024-05-24 12:35:58,075 Power(IN) = 24.0 dBm, Voltage(OUT) = 586.14984042233 mV
+2024-05-24 12:35:58,075 Port 1 apply auxadc_poly_coeffs P0 : 1.9260445524698524, P1: -29.313079836148408 from ATE
+2024-05-24 12:35:58,077 Estimate coefficients from json file:
+	Freq = 3450000000 Hz
+	Bandwidth = 100MHz 
+	P0 (Slope) = 1.9227040060339444
+	P1 (Offset) = -29.002936361180964  
+2024-05-24 12:35:58,077 	Voltage MAX Error = 0.018273457175567387
+2024-05-24 12:35:58,077 	Voltage RMS Error = 0.01217324016202374
+2024-05-24 12:35:58,077 	Power MAX Error = 0.035134449315552985
+2024-05-24 12:35:58,077 	Power RMS Error = 0.023405537625937004
+2024-05-24 12:35:58,078 Estimate coefficients from json file:
+	Freq = 3630000000 Hz
+	Bandwidth = 100MHz 
+	P0 (Slope) = 1.9153341771053893
+	P1 (Offset) = -29.455894170614478  
+2024-05-24 12:35:58,078 	Voltage MAX Error = 0.015838108188781064
+2024-05-24 12:35:58,078 	Voltage RMS Error = 0.009338673942148726
+2024-05-24 12:35:58,078 	Power MAX Error = 0.030335269914669283
+2024-05-24 12:35:58,078 	Power RMS Error = 0.01788668137024348
+2024-05-24 12:35:58,079 Power(IN) = 24.0 dBm, Voltage(OUT) = 571.246774195981 mV
+2024-05-24 12:35:58,079 Port 2 apply auxadc_poly_coeffs P0 : 1.9226745267182301, P1: -29.0047481924187 from ATE
+2024-05-24 12:35:58,080 Estimate coefficients from json file:
+	Freq = 3450000000 Hz
+	Bandwidth = 100MHz 
+	P0 (Slope) = 1.9193816859533417
+	P1 (Offset) = -29.017640809953352  
+2024-05-24 12:35:58,080 	Voltage MAX Error = 0.015097788835927162
+2024-05-24 12:35:58,081 	Voltage RMS Error = 0.012500848943396946
+2024-05-24 12:35:58,081 	Power MAX Error = 0.028978419390064403
+2024-05-24 12:35:58,081 	Power RMS Error = 0.02399390052082441
+2024-05-24 12:35:58,081 Estimate coefficients from json file:
+	Freq = 3630000000 Hz
+	Bandwidth = 100MHz 
+	P0 (Slope) = 1.8970146757203947
+	P1 (Offset) = -29.33685349042111  
+2024-05-24 12:35:58,081 	Voltage MAX Error = 0.015349087898872682
+2024-05-24 12:35:58,082 	Voltage RMS Error = 0.010841619644996555
+2024-05-24 12:35:58,082 	Power MAX Error = 0.02911744500308089
+2024-05-24 12:35:58,082 	Power RMS Error = 0.020566711575136693
+2024-05-24 12:35:58,082 Power(IN) = 24.0 dBm, Voltage(OUT) = 578.655773268782 mV
+2024-05-24 12:35:58,082 Port 3 apply auxadc_poly_coeffs P0 : 1.91929221791241, P1: -29.018917660675225 from ATE
+2024-05-24 12:35:58,975 Read RU Config: {'DL_phase_comp_en': True,
+ 'DPD_settling_pre_kick': 0,
+ 'PA_settling_pre_kick': 20,
+ 'TRXSW_settling_pre_kick': 0,
+ 'UL_phase_comp_en': True,
+ 'acceptance_list_of_ssm': 'QL-PRC',
+ 'accepted_clock_classes': [6, 7, 135, 140, 150, 160, 165, 248, 255],
+ 'adc_dc_compensation_image': 0,
+ 'adc_dc_compensation_real': 0,
+ 'ap_console': '0x3',
+ 'ap_interface': ['fm1-mac6', 'fm1-mac2', 'fm1-mac10', 'fm1-mac5'],
+ 'ap_interface_all': ['fm1-mac6', 'fm1-mac2', 'fm1-mac10', 'fm1-mac5'],
+ 'ap_mac': ['00:0E:AD:33:44:00',
+            '00:0E:AD:33:44:01',
+            '00:0E:AD:33:44:02',
+            '00:0E:AD:33:44:03'],
+ 'ap_mac_all': ['00:0E:AD:33:44:00',
+                '00:0E:AD:33:44:01',
+                '00:0E:AD:33:44:02',
+                '00:0E:AD:33:44:03'],
+ 'ap_mac_ipc': ['00:0E:AD:00:00:20',
+                '00:0E:AD:00:00:21',
+                '00:0E:AD:00:00:22',
+                '00:0E:AD:00:00:23'],
+ 'ap_mac_loopback': ['00:0E:AD:33:44:10',
+                     '00:0E:AD:33:44:11',
+                     '00:0E:AD:33:44:12',
+                     '00:0E:AD:33:44:13'],
+ 'ap_pps': 0,
+ 'ap_recovery_delta': 0,
+ 'auxadc_pol_coeffs_manually': False,
+ 'bypass_cali': [False, False, False, False],
+ 'cal_auxadc_poly_coeffs_0': [1.9214883634464588,
+                              1.9260445524698524,
+                              1.9226745267182301,
+                              1.91929221791241],
+ 'cal_auxadc_poly_coeffs_1': [-29.228515934180855,
+                              -29.313079836148408,
+                              -29.0047481924187,
+                              -29.018917660675225],
+ 'cali_cfg': '0x300ff',
+ 'center-of-channel-bandwidth': [3450720000, 3450720000],
+ 'gps_time_delta': 0,
+ 'holdover_interval': 60,
+ 'l2_mtu': 8000,
+ 'llcp_switch_delay_ticks': 1,
+ 'llcp_switch_fail_upper_limit': 2000,
+ 'lo_leakage_compensation_image': 0,
+ 'lo_leakage_compensation_real': 0,
+ 'low_level_rx_endpoint/compression/fs-offset': 0,
+ 'low_level_rx_endpoint/compression_format': 'BFP',
+ 'low_level_rx_endpoint/compression_iq_bitwidth': 9,
+ 'low_level_rx_endpoint/compression_type': 'STATIC',
+ 'low_level_rx_endpoint/num_prb_per_scs_30khz': 273,
+ 'low_level_tx_endpoint/compression/fs-offset': 0,
+ 'low_level_tx_endpoint/compression_format': 'BFP',
+ 'low_level_tx_endpoint/compression_iq_bitwidth': 9,
+ 'low_level_tx_endpoint/compression_type': 'STATIC',
+ 'low_level_tx_endpoint/num_prb_per_scs_30khz': 273,
+ 'ms_rf_ctl': ['master', 'slave', 'master', 'slave'],
+ 'np_ecpri_forwarding': {'dl': {'0x0000': '0001',
+                                '0x0001': '0010',
+                                '0x0002': '0100',
+                                '0x0003': '1000',
+                                '0x0004': '0001',
+                                '0x0005': '0010',
+                                '0x0006': '0100',
+                                '0x0007': '1000',
+                                '0x2222': '0010',
+                                '0x5555': '1000',
+                                '0x6666': '0001',
+                                '0xaaaa': '0100'},
+                         'ul': {'0x0000': '0001',
+                                '0x0001': '0010',
+                                '0x0002': '0100',
+                                '0x0003': '1000',
+                                '0x0004': '0001',
+                                '0x0005': '0010',
+                                '0x0006': '0100',
+                                '0x0007': '1000',
+                                '0x2222': '0010',
+                                '0x5555': '1000',
+                                '0x6666': '0001',
+                                '0xaaaa': '0100'}},
+ 'np_interface': 'fm1-mac9',
+ 'offset_alpha': 0,
+ 'offset_beta': 0,
+ 'op_mode': 'oran',
+ 'pcap_enable': True,
+ 'processing_element/du_mac_address': '00:11:22:33:44:66',
+ 'processing_element/pcp': 7,
+ 'processing_element/ru_mac_address': '00:e0:0c:00:ae:06',
+ 'processing_element/vlan_id': 3,
+ 'ptp_debug': False,
+ 'ptp_stack': 'accutime',
+ 'rf_cfg': 1,
+ 'rf_interface': 1,
+ 'rf_pa': 2,
+ 'rf_rx_gain_manual': 0,
+ 'rf_tx_gain_manual': 0,
+ 'rfic_num': [0, 1],
+ 'rx_array_carrier/n_ta_offset': 25600,
+ 'rx_gain_correction': [0, 0, 0, 0],
+ 'rx_power_agc_threshold': -740,
+ 'rx_power_agc_update_period': 4,
+ 'skip_lock': False,
+ 'synce_enable': False,
+ 'tx_carrier_gain': 240000,
+ 'tx_gain_correction': [7117, 7117, 7117, 7117],
+ 'tx_loss': 86,
+ 'tx_power_detect_floor_delta': 60000,
+ 'tx_rf_gain_max': [22, 22],
+ 'vdu_enable': False,
+ 'version': '2.0.1'}
+2024-05-24 12:36:16,967 AP 0 pre-set Board Configured success!
+2024-05-24 12:36:17,055 AP 1 pre-set Board Configured success!
+2024-05-24 12:36:17,172 AP 2 pre-set Board Configured success!
+2024-05-24 12:36:17,236 AP 3 pre-set Board Configured success!
+2024-05-24 12:36:17,749 [/mta-ru-manager:handover-event] got {'status': 'COMPLETED'}, TODO
+2024-05-24 12:36:18,120 AP 1 set Board Configured success!
+2024-05-24 12:36:18,128 AP 0 set Board Configured success!
+2024-05-24 12:36:18,133 AP 2 set Board Configured success!
+2024-05-24 12:36:18,139 AP 3 set Board Configured success!
+2024-05-24 12:36:18,143 Start NP PTP Stack
+2024-05-24 12:36:42,035 Get PTP Status: {'gps_time_second': 1400560620,
+ 'ptp_time': '2024-05-24 04:37:19.029683849',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:36:44,176 Get PTP Status: {'gps_time_second': 1400560622,
+ 'ptp_time': '2024-05-24 04:37:21.171227257',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:36:45,296 Get PTP Status: {'gps_time_second': 1400560623,
+ 'ptp_time': '2024-05-24 04:37:22.290350041',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:36:46,414 Get PTP Status: {'gps_time_second': 1400560624,
+ 'ptp_time': '2024-05-24 04:37:23.409274985',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:36:47,533 Get PTP Status: {'gps_time_second': 1400560625,
+ 'ptp_time': '2024-05-24 04:37:24.528856505',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:36:48,653 Get PTP Status: {'gps_time_second': 1400560626,
+ 'ptp_time': '2024-05-24 04:37:25.648184649',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:36:49,773 Get PTP Status: {'gps_time_second': 1400560627,
+ 'ptp_time': '2024-05-24 04:37:26.766096841',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:36:50,891 Get PTP Status: {'gps_time_second': 1400560628,
+ 'ptp_time': '2024-05-24 04:37:27.886687081',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:36:52,011 Get PTP Status: {'gps_time_second': 1400560630,
+ 'ptp_time': '2024-05-24 04:37:29.007093193',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:36:53,129 Get PTP Status: {'gps_time_second': 1400560631,
+ 'ptp_time': '2024-05-24 04:37:30.125960809',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:36:54,247 Get PTP Status: {'gps_time_second': 1400560632,
+ 'ptp_time': '2024-05-24 04:37:31.242004345',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:36:55,366 Get PTP Status: {'gps_time_second': 1400560633,
+ 'ptp_time': '2024-05-24 04:37:32.361722953',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:36:56,484 Get PTP Status: {'gps_time_second': 1400560634,
+ 'ptp_time': '2024-05-24 04:37:33.479648825',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:36:57,602 Get PTP Status: {'gps_time_second': 1400560635,
+ 'ptp_time': '2024-05-24 04:37:34.598095097',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:36:59,713 Get PTP Status: {'gps_time_second': 1400560637,
+ 'ptp_time': '2024-05-24 04:37:36.708530329',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:37:00,831 Get PTP Status: {'gps_time_second': 1400560638,
+ 'ptp_time': '2024-05-24 04:37:37.827816489',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:37:01,951 Get PTP Status: {'gps_time_second': 1400560639,
+ 'ptp_time': '2024-05-24 04:37:38.947203641',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:37:03,070 Get PTP Status: {'gps_time_second': 1400560641,
+ 'ptp_time': '2024-05-24 04:37:40.066336137',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:37:04,190 Get PTP Status: {'gps_time_second': 1400560642,
+ 'ptp_time': '2024-05-24 04:37:41.186749705',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:37:05,310 Get PTP Status: {'gps_time_second': 1400560643,
+ 'ptp_time': '2024-05-24 04:37:42.306138297',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:37:06,429 Get PTP Status: {'gps_time_second': 1400560644,
+ 'ptp_time': '2024-05-24 04:37:43.424645385',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:37:07,546 Get PTP Status: {'gps_time_second': 1400560645,
+ 'ptp_time': '2024-05-24 04:37:44.541788649',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:37:08,665 Get PTP Status: {'gps_time_second': 1400560646,
+ 'ptp_time': '2024-05-24 04:37:45.661919625',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:37:09,783 Get PTP Status: {'gps_time_second': 1400560647,
+ 'ptp_time': '2024-05-24 04:37:46.780267689',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:37:10,903 Get PTP Status: {'gps_time_second': 1400560648,
+ 'ptp_time': '2024-05-24 04:37:47.900017081',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:37:12,027 Get PTP Status: {'gps_time_second': 1400560650,
+ 'ptp_time': '2024-05-24 04:37:49.023783241',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'NO'}
+2024-05-24 12:37:13,146 Get PTP Status: {'gps_time_second': 1400560651,
+ 'ptp_time': '2024-05-24 04:37:50.142896921',
+ 'sync-state': 'SYNCHRONIZING',
+ 'synchronized': 'YES'}
+2024-05-24 12:37:14,533 AP 3 set SYNC success!
+2024-05-24 12:37:14,535 AP 1 set SYNC success!
+2024-05-24 12:37:14,540 AP 2 set SYNC success!
+2024-05-24 12:37:14,565 AP 0 set SYNC success!
+2024-05-24 12:37:15,104 AP 1 M-Plane SYNC!
+2024-05-24 12:37:15,115 AP 3 M-Plane SYNC!
+2024-05-24 12:37:15,552 AP 2 M-Plane SYNC!
+2024-05-24 12:37:15,560 AP 0 M-Plane SYNC!
+2024-05-24 12:37:15,709 AP 0 S-Plane Ready.
+2024-05-24 12:37:15,716 AP 2 S-Plane Ready.
+2024-05-24 12:37:15,722 AP 1 S-Plane Ready.
+2024-05-24 12:37:15,732 AP 3 S-Plane Ready.
+2024-05-24 12:37:16,769 MIB_WRITE GPS Time: 1400560654, GPS Delta: 0, Alpha: 0, Beta: 0 to AP 0
+2024-05-24 12:37:16,889 MIB_WRITE GPS Time: 1400560654, GPS Delta: 0, Alpha: 0, Beta: 0 to AP 3
+2024-05-24 12:37:17,011 MIB_WRITE GPS Time: 1400560655, GPS Delta: 0, Alpha: 0, Beta: 0 to AP 1
+2024-05-24 12:37:17,133 MIB_WRITE GPS Time: 1400560655, GPS Delta: 0, Alpha: 0, Beta: 0 to AP 2
+2024-05-24 12:37:17,368 MIB_WRITE SPlane Handover to AP 0
+2024-05-24 12:37:17,505 MIB_WRITE SPlane Handover to AP 3
+2024-05-24 12:37:17,620 MIB_WRITE SPlane Handover to AP 1
+2024-05-24 12:37:17,736 MIB_WRITE SPlane Handover to AP 2
+2024-05-24 12:37:18,133 AP 1 S-Plane Lock.
+2024-05-24 12:37:18,140 AP 2 S-Plane Lock.
+2024-05-24 12:37:18,165 AP 3 S-Plane Lock.
+2024-05-24 12:37:18,172 AP 0 S-Plane Lock.
+2024-05-24 12:37:18,540 AP 1 set CAL success!
+2024-05-24 12:37:18,547 AP 3 set CAL success!
+2024-05-24 12:37:18,573 AP 2 set CAL success!
+2024-05-24 12:37:18,578 AP 0 set CAL success!
+2024-05-24 12:38:01,840 RU State: ruidle
+2024-05-24 12:38:02,217 AP 3 set ORAN success!
+2024-05-24 12:38:02,223 AP 0 set ORAN success!
+2024-05-24 12:38:02,232 AP 2 set ORAN success!
+2024-05-24 12:38:02,248 AP 1 set ORAN success!
+2024-05-24 12:38:04,089 RU State: oranactive
