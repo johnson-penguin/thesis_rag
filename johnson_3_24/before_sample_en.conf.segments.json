@@ -1,0 +1,558 @@
+[
+  {
+    "label": "nr_cellid",
+    "content": "nr_cellid = 1;"
+  },
+  {
+    "label": "system_core",
+    "content": "system_core = 0;"
+  },
+  {
+    "label": "L1s",
+    "content": "L1s = (\n{\n  num_cc = 1;                              // Number of supported Component Carriers (here single carrier).\n  tr_n_preference = \"local_mac\";           // Preferred transport between L1 and MAC layer using local IPC.\n  prach_dtx_threshold = 130;               // DTX threshold for PRACH in subframes. If UE doesn’t respond in time, gNB considers RACH failed.\n  pucch0_dtx_threshold = 80;               // DTX threshold for PUCCH format 0. No uplink control signal beyond this means UE is lost.\n  pusch_dtx_threshold = 10;                // DTX threshold for PUSCH (uplink shared channel), likely in TTI.\n  max_ldpc_iterations = 10;                // Max decoding iterations for LDPC (Low Density Parity Check). Higher is more accurate but costly.\n  tx_amp_backoff_dB = 20;                  // Transmission power backoff (dB), protects PA and aligns with O-RU config. **Must match O-RU** to avoid signal issues.\n  L1_rx_thread_core = 8;                   // Assign CPU core for physical layer RX thread (core 8 here).\n  L1_tx_thread_core = 10;                  // Assign CPU core for physical layer TX thread (core 10). Helps reduce context switching and boost performance.\n  phase_compensation = 0;                  // Phase compensation switch, 0 is off. Should match O-RU. If on, gNB adjusts phase based on O-RU feedback.\n}\n);"
+  },
+  {
+    "label": "searchSpaceZero",
+    "content": "searchSpaceZero = 0;"
+  },
+  {
+    "label": "T1a_up",
+    "content": "T1a_up = (155, 300);"
+  },
+  {
+    "label": "ul_frequencyBand",
+    "content": "ul_frequencyBand                                              = 78;"
+  },
+  {
+    "label": "pdsch_AntennaPorts_XP",
+    "content": "pdsch_AntennaPorts_XP = 2;"
+  },
+  {
+    "label": "n_TimingAdvanceOffset",
+    "content": "n_TimingAdvanceOffset = 0;"
+  },
+  {
+    "label": "initialDLBWPsubcarrierSpacing",
+    "content": "initialDLBWPsubcarrierSpacing                               = 1;"
+  },
+  {
+    "label": "Asn1_verbosity",
+    "content": "Asn1_verbosity = \"none\";"
+  },
+  {
+    "label": "mtu",
+    "content": "mtu = 1500;"
+  },
+  {
+    "label": "fhi_72",
+    "content": "fhi_72 = {\n  dpdk_devices = (\"0000:ca:02.0\", \"0000:ca:02.1\");   // PCI addresses of DPDK NICs used for DU <-> RU data transmission.\n  system_core = 0;   // System core used for binding main process or control flow.\n  io_core = 4;  // IO core used for network I/O (e.g., packet TX/RX).\n  worker_cores = (2);  // Worker cores for processing data plane tasks (multiple allowed).\n  du_addr = (\"00:11:22:33:44:66\", \"00:11:22:33:44:66\");   // MAC addresses of DU (dual-port setup for full-duplex or redundancy).\n  ru_addr = (\"10:70:fd:14:1c:10\", \"10:70:fd:14:1c:10\");   // MAC addresses of the physical RU devices.\n  mtu = 1500;   // MTU setting, usually 1500 (standard Ethernet frame size).\n  file_prefix = \"fhi_72\";   // Prefix for DPDK memory region naming to avoid conflict among instances.\n\n  # FrontHaul (FHI) time parameter setting block\n  fh_config = ({\n\n    Tadv_cp_dl = 125;    // Advance time for downlink control plane (unit: ns).\n    T2a_cp_dl = (259, 470);    // DL control plane DU -> RU max/min delay (ns).\n    T2a_cp_ul = (125, 1200);    // UL control plane RU -> DU max/min delay (ns).\n    T2a_up = (70, 345);    // UL user plane RU -> DU max/min delay (ns).\n    Ta3 = (50, 171);    // Time from DU receiving data to passing it to L1 (ns).\n    T1a_cp_dl = (258, 392);    // DL control plane DU processing time (DU to MAC packet send) in ns.\n    T1a_cp_ul = (285, 300);    // UL control plane DU processing time (ns).\n    T1a_up = (155, 300);    // UL user plane DU processing time (ns).\n    Ta4 = (0, 200);    // RU forwarding delay after receiving data (ns).\n\n    ru_config = {\n      iq_width = 9;           // IQ data width (9 bits indicates compressed format).\n      iq_width_prach = 9;     // IQ data width used for PRACH.\n      fft_size = 12;          // FFT size (log2(N), N=2^12=4096; corresponds to 273 RBs).\n    };"
+  },
+  {
+    "label": "log_config",
+    "content": "log_config :\n{\n  global_log_level                      =\"info\";\n  hw_log_level                          =\"debug\";\n  phy_log_level                         =\"info\";\n  mac_log_level                         =\"info\";\n  rlc_log_level                         =\"info\";\n  pdcp_log_level                        =\"info\";\n  rrc_log_level                         =\"info\";\n  ngap_log_level                        =\"info\";\n  f1ap_log_level                        =\"info\";\n};"
+  },
+  {
+    "label": "dl_offstToCarrier",
+    "content": "dl_offstToCarrier                                           = 0;"
+  },
+  {
+    "label": "initialULBWPlocationAndBandwidth",
+    "content": "initialULBWPlocationAndBandwidth                            = 1099;"
+  },
+  {
+    "label": "Tadv_cp_dl",
+    "content": "Tadv_cp_dl = 125;"
+  },
+  {
+    "label": "do_precoding",
+    "content": "do_precoding = 0;"
+  },
+  {
+    "label": "ul_offstToCarrier",
+    "content": "ul_offstToCarrier                                             = 0;"
+  },
+  {
+    "label": "zeroCorrelationZoneConfig",
+    "content": "zeroCorrelationZoneConfig                                 = 0;"
+  },
+  {
+    "label": "ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR",
+    "content": "ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR                = 3;"
+  },
+  {
+    "label": "max_ldpc_iterations",
+    "content": "max_ldpc_iterations = 10;"
+  },
+  {
+    "label": "gNBs",
+    "content": "gNBs =\n(\n {\n    ////////// Identification parameters:\n    gNB_ID    = 0xe01;             // gNB identifier (customizable), used to uniquely identify the gNB. This is 0xE01.\n    gNB_name  = \"gNB-OAI\";         // Name of the gNB, for identification only with no protocol function.\n\n    // Tracking area code, 0x0000 and 0xfffe are reserved values\n    tracking_area_code  =  1;        // TAC (Tracking Area Code), used by the core network to identify the area (similar to LAC).\n\n    plmn_list = ({ mcc = 001 ;mnc = 01 mnc_length = 2 snssaiList = ( { sst = 1 })})\n    # Mobile Country Code (MCC), here set to 001 (for testing).\n    # Mobile Network Code (MNC), here set to 01.\n    # MNC length is 2 digits (some MNCs use 3 digits).\n    # snssaiList: Single Network Slice Selection Assistance Information, SST=1 indicates eMBB service type.\n \n\n    nr_cellid = 1;  // NR Cell ID used to differentiate between gNB cells.\n\n    ////////// Physical parameters:\n    pdsch_AntennaPorts_XP = 2;     // Number of antenna ports for PDSCH (downlink shared channel), here is 2.\n    pusch_AntennaPorts    = 2;     // Number of antenna ports for PUSCH (uplink shared channel), also 2.\n    do_CSIRS              = 1;     // Whether CSI-RS (Channel State Information Reference Signal) is enabled, 1 means enabled.\n    do_SRS                = 0;     // Whether SRS (Sounding Reference Signal) is enabled, 0 means disabled.\n    force_256qam_off      = 1;     // Whether to force disable 256QAM modulation, 1 means disabled (up to 64QAM allowed).\n    sib1_tda              = 15;    // SIB1 time domain allocation, 15 refers to the TDA index.\n\n\n    pdcch_ConfigSIB1 = (\n      {\n        controlResourceSetZero = 11; // Configuration index for CORESET#0, affects the PDCCH resource range.\n        searchSpaceZero = 0; // Configuration index for SearchSpace#0, affects where UE receives PDCCH.\n      }\n    );"
+  },
+  {
+    "label": "prach_dtx_threshold",
+    "content": "prach_dtx_threshold = 130;"
+  },
+  {
+    "label": "ul_max_mcs",
+    "content": "ul_max_mcs = 28;"
+  },
+  {
+    "label": "pdcp_log_level",
+    "content": "pdcp_log_level                        =\"info\";"
+  },
+  {
+    "label": "Ta3",
+    "content": "Ta3 = (50, 171);"
+  },
+  {
+    "label": "preambleTransMax",
+    "content": "preambleTransMax                                          = 7;"
+  },
+  {
+    "label": "rsrp_ThresholdSSB",
+    "content": "rsrp_ThresholdSSB                                           = 19;"
+  },
+  {
+    "label": "Active_gNBs",
+    "content": "Active_gNBs = ( \"gNB-OAI\");"
+  },
+  {
+    "label": "local_rf",
+    "content": "local_rf       = \"no\";"
+  },
+  {
+    "label": "controlResourceSetZero",
+    "content": "controlResourceSetZero = 11;"
+  },
+  {
+    "label": "tr_preference",
+    "content": "tr_preference  = \"raw_if4p5\";"
+  },
+  {
+    "label": "security",
+    "content": "security = {\n  # preferred ciphering algorithms\n  # the first one of the list that an UE supports in chosen\n  # valid values: nea0, nea1, nea2, nea3\n  ciphering_algorithms = ( \"nea0\" ); // Set to nea0, meaning no encryption (plain text transmission).\n\n  # preferred integrity algorithms\n  # the first one of the list that an UE supports in chosen\n  # valid values: nia0, nia1, nia2, nia3\n  integrity_algorithms = ( \"nia2\", \"nia0\" ); // Prefer AES for integrity protection; fallback to none (nia0) if UE doesn't support.\n  # setting 'drb_ciphering' to \"no\" disables ciphering for DRBs, no matter\n  # what 'ciphering_algorithms' configures; same thing for 'drb_integrity'\n  drb_ciphering = \"yes\"; // Ciphering enabled for DRBs (unless nea0 is selected).\n  drb_integrity = \"no\";  // Disable DRB integrity protection (saves compute but reduces security).\n};"
+  },
+  {
+    "label": "physCellId",
+    "content": "physCellId = 0;"
+  },
+  {
+    "label": "SCTP_OUTSTREAMS",
+    "content": "SCTP_OUTSTREAMS = 2;"
+  },
+  {
+    "label": "pucch0_dtx_threshold",
+    "content": "pucch0_dtx_threshold = 80;"
+  },
+  {
+    "label": "referenceSubcarrierSpacing",
+    "content": "referenceSubcarrierSpacing                                    = 1;"
+  },
+  {
+    "label": "force_256qam_off",
+    "content": "force_256qam_off      = 1;"
+  },
+  {
+    "label": "prach_ConfigurationIndex",
+    "content": "prach_ConfigurationIndex                                  = 151;"
+  },
+  {
+    "label": "io_core",
+    "content": "io_core = 4;"
+  },
+  {
+    "label": "ul_carrierBandwidth",
+    "content": "ul_carrierBandwidth                                           = 273;"
+  },
+  {
+    "label": "hw_log_level",
+    "content": "hw_log_level                          =\"debug\";"
+  },
+  {
+    "label": "f1ap_log_level",
+    "content": "f1ap_log_level                        =\"info\";"
+  },
+  {
+    "label": "dmrs_TypeA_Position",
+    "content": "dmrs_TypeA_Position                                           = 0;"
+  },
+  {
+    "label": "msg3_DeltaPreamble",
+    "content": "msg3_DeltaPreamble                                          = 2;"
+  },
+  {
+    "label": "pucch_TargetSNRx10",
+    "content": "pucch_TargetSNRx10 = 230;"
+  },
+  {
+    "label": "RUs",
+    "content": "RUs = (\n{\n  local_rf       = \"no\";\n  nb_tx          = 2; # 4\n  nb_rx          = 2; # 4\n  att_tx         = 0; # TODO relevant?\n  att_rx         = 0; # TODO relevant?\n  bands          = [78];\n  max_pdschReferenceSignalPower = -27;\n  max_rxgain                    = 75; # TODO relevant?\n  sf_extension                  = 0; # TODO relevant?\n  eNB_instances  = [0]; # TODO is relevant?\n  ru_thread_core = 6;\n  sl_ahead       = 5;\n  ##beamforming 1x2 matrix: 1 layer x 2 antennas\n  bf_weights = [0x00007fff, 0x0000,0x00007fff, 0x0000]; # necessary?\n\n  tr_preference  = \"raw_if4p5\"; # important: activate FHI7.2\n  do_precoding = 0; # needs to match O-RU configuration\n  \n}\n);"
+  },
+  {
+    "label": "L1_rx_thread_core",
+    "content": "L1_rx_thread_core = 8;"
+  },
+  {
+    "label": "pusch_AntennaPorts",
+    "content": "pusch_AntennaPorts    = 2;"
+  },
+  {
+    "label": "sl_ahead",
+    "content": "sl_ahead       = 5;"
+  },
+  {
+    "label": "drb_integrity",
+    "content": "drb_integrity = \"no\";"
+  },
+  {
+    "label": "file_prefix",
+    "content": "file_prefix = \"fhi_72\";"
+  },
+  {
+    "label": "fh_config",
+    "content": "fh_config = ({\n\n    Tadv_cp_dl = 125;    // Advance time for downlink control plane (unit: ns).\n    T2a_cp_dl = (259, 470);    // DL control plane DU -> RU max/min delay (ns).\n    T2a_cp_ul = (125, 1200);    // UL control plane RU -> DU max/min delay (ns).\n    T2a_up = (70, 345);    // UL user plane RU -> DU max/min delay (ns).\n    Ta3 = (50, 171);    // Time from DU receiving data to passing it to L1 (ns).\n    T1a_cp_dl = (258, 392);    // DL control plane DU processing time (DU to MAC packet send) in ns.\n    T1a_cp_ul = (285, 300);    // UL control plane DU processing time (ns).\n    T1a_up = (155, 300);    // UL user plane DU processing time (ns).\n    Ta4 = (0, 200);    // RU forwarding delay after receiving data (ns).\n\n    ru_config = {\n      iq_width = 9;           // IQ data width (9 bits indicates compressed format).\n      iq_width_prach = 9;     // IQ data width used for PRACH.\n      fft_size = 12;          // FFT size (log2(N), N=2^12=4096; corresponds to 273 RBs).\n    };\n    # PRACH Settings\n    prach_config = {\n      eAxC_offset = 2;  // eAxC offset indicating which channel PRACH starts from.\n    };\n  });"
+  },
+  {
+    "label": "T2a_up",
+    "content": "T2a_up = (70, 345);"
+  },
+  {
+    "label": "ra_ResponseWindow",
+    "content": "ra_ResponseWindow                                           = 5;"
+  },
+  {
+    "label": "max_rxgain",
+    "content": "max_rxgain                    = 75;"
+  },
+  {
+    "label": "dl_UL_TransmissionPeriodicity",
+    "content": "dl_UL_TransmissionPeriodicity                                 = 6;"
+  },
+  {
+    "label": "sib1_tda",
+    "content": "sib1_tda              = 15;"
+  },
+  {
+    "label": "SCTP_INSTREAMS",
+    "content": "SCTP_INSTREAMS  = 2;"
+  },
+  {
+    "label": "GNB_PORT_FOR_S1U",
+    "content": "GNB_PORT_FOR_S1U             = 2152;"
+  },
+  {
+    "label": "ssb_PositionsInBurst_PR",
+    "content": "ssb_PositionsInBurst_PR                                       = 2;"
+  },
+  {
+    "label": "iq_width",
+    "content": "iq_width = 9;"
+  },
+  {
+    "label": "phy_log_level",
+    "content": "phy_log_level                         =\"info\";"
+  },
+  {
+    "label": "fft_size",
+    "content": "fft_size = 12;"
+  },
+  {
+    "label": "ru_thread_core",
+    "content": "ru_thread_core = 6;"
+  },
+  {
+    "label": "integrity_algorithms",
+    "content": "integrity_algorithms = ( \"nia2\", \"nia0\" );"
+  },
+  {
+    "label": "tr_n_preference",
+    "content": "tr_n_preference = \"local_RRC\";"
+  },
+  {
+    "label": "pMax",
+    "content": "pMax                                                          = 23;"
+  },
+  {
+    "label": "powerRampingStep",
+    "content": "powerRampingStep                                            = 3;"
+  },
+  {
+    "label": "eAxC_offset",
+    "content": "eAxC_offset = 2;"
+  },
+  {
+    "label": "nrofDownlinkSlots",
+    "content": "nrofDownlinkSlots                                             = 7;"
+  },
+  {
+    "label": "12",
+    "content": "12=4096;"
+  },
+  {
+    "label": "pucchGroupHopping",
+    "content": "pucchGroupHopping                                           = 0;"
+  },
+  {
+    "label": "nrofUplinkSlots",
+    "content": "nrofUplinkSlots                                               = 2;"
+  },
+  {
+    "label": "dpdk_devices",
+    "content": "dpdk_devices = (\"0000:ca:02.0\", \"0000:ca:02.1\");"
+  },
+  {
+    "label": "du_addr",
+    "content": "du_addr = (\"00:11:22:33:44:66\", \"00:11:22:33:44:66\");"
+  },
+  {
+    "label": "tr_n_preference",
+    "content": "tr_n_preference = \"local_mac\";"
+  },
+  {
+    "label": "mac_log_level",
+    "content": "mac_log_level                         =\"info\";"
+  },
+  {
+    "label": "initialDLBWPsearchSpaceZero",
+    "content": "initialDLBWPsearchSpaceZero                                 = 0;"
+  },
+  {
+    "label": "servingCellConfigCommon",
+    "content": "servingCellConfigCommon = (\n    {\n #spCellConfigCommon\n\n      physCellId = 0;   // Physical cell ID, range 0~1007, used to identify the cell.\n     # n_TimingAdvanceOffset = 0;  // Timing advance offset, usually not manually configured\n#  downlinkConfigCommon\n    #frequencyInfoDL\n      # this is 3450.72 MHz (center frequency)\n      absoluteFrequencySSB                                          = 630048; // SSB center frequency, approx. 3450.72 MHz (see TS 38.104 Table 5.4.2.1-1).\n      dl_frequencyBand                                              = 78;  // Band number, n78 represents 3.3GHz~3.8GHz.\n      # this is 3401.58 MHz\n      dl_absoluteFrequencyPointA                                    = 626772; // Absolute frequency of Point A, approx. 3401.58 MHz.\n      #scs-SpecificCarrierList\n        dl_offstToCarrier                                           = 0; // Frequency offset relative to Point A.\n# subcarrierSpacing\n# 0=kHz15, 1=kHz30, 2=kHz60, 3=kHz120\n        dl_subcarrierSpacing                                        = 1; // Downlink subcarrier spacing is 30kHz.\n        dl_carrierBandwidth                                         = 273; // Downlink bandwidth (273 Resource Blocks).\n     #initialDownlinkBWP\n      #genericParameters\n       initialDLBWPlocationAndBandwidth                             = 1099; #38.101-1 Table 5.3.2-1 // Initial BWP location and bandwidth (see TS 38.101-1 Table 5.3.2-1).\n       #\n# subcarrierSpacing\n# 0=kHz15, 1=kHz30, 2=kHz60, 3=kHz120\n        initialDLBWPsubcarrierSpacing                               = 1; // Initial downlink BWP subcarrier spacing is 30kHz.\n\n      #pdcch-ConfigCommon\n        initialDLBWPcontrolResourceSetZero                          = 11; // ControlResourceSet ID\n        initialDLBWPsearchSpaceZero                                 = 0;  // SearchSpace ID\n\n  #uplinkConfigCommon\n     #frequencyInfoUL\n      ul_frequencyBand                                              = 78; // Uplink band, same as downlink: n78\n      #scs-SpecificCarrierList\n      ul_offstToCarrier                                             = 0; // Offset is 0 when UL shares DL band\n# subcarrierSpacing\n# 0=kHz15, 1=kHz30, 2=kHz60, 3=kHz120\n      ul_subcarrierSpacing                                          = 1; // Uplink subcarrier spacing is 30kHz\n      ul_carrierBandwidth                                           = 273; // Uplink bandwidth is 273 RBs\n      pMax                                                          = 23; // UE max transmit power (dBm)\n     #initialUplinkBWP\n      #genericParameters\n        initialULBWPlocationAndBandwidth                            = 1099; // Initial UL BWP bandwidth and location\n# subcarrierSpacing\n# 0=kHz15, 1=kHz30, 2=kHz60, 3=kHz120\n        initialULBWPsubcarrierSpacing                               = 1; // Uplink subcarrier spacing is 30kHz\n      #rach-ConfigCommon\n        #rach-ConfigGeneric\n          prach_ConfigurationIndex                                  = 151; // PRACH config index (TS 38.211 Table 6.3.3.2-2)\n#prach_msg1_FDM\n#0 = one, 1=two, 2=four, 3=eight\n          prach_msg1_FDM                                            = 0; // Number of FDM for Msg1, 0 = 1 unit\n          prach_msg1_FrequencyStart                                 = 0; // Start frequency position of Msg1\n          zeroCorrelationZoneConfig                                 = 0; // ZCZ configuration, affects PRACH sequence selection\n          preambleReceivedTargetPower                               = -100; // Target received power of preamble (dBm)\n#preamblTransMax (0...10) = (3,4,5,6,7,8,10,20,50,100,200)\n          preambleTransMax                                          = 7; // Max number of preamble transmissions (value 7 = 20 times)\n#powerRampingStep\n# 0=dB0,1=dB2,2=dB4,3=dB6\n        powerRampingStep                                            = 3; // Power ramping step (6 dB)\n#ra_ReponseWindow\n#1,2,4,8,10,20,40,80\n        ra_ResponseWindow                                           = 5; // RA response window (value 5 = 20 slots)\n#ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR\n#1=oneeighth,2=onefourth,3=half,4=one,5=two,6=four,7=eight,8=sixteen\n        ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR                = 3; // Ratio of contention-based preambles per SSB (3 = half)\n#oneHalf (0..15) 4,8,12,16,...60,64\n        ssb_perRACH_OccasionAndCB_PreamblesPerSSB                   = 15; // Number of contention-based preambles per SSB\n#ra_ContentionResolutionTimer\n#(0..7) 8,16,24,32,40,48,56,64\n        ra_ContentionResolutionTimer                                = 7;  // Contention resolution timer (value 7 = 64ms)\n        rsrp_ThresholdSSB                                           = 19; // RSRP threshold for triggering RA (unit: dBm)\n#prach-RootSequenceIndex_PR\n#1 = 839, 2 = 139\n        prach_RootSequenceIndex_PR                                  = 2; // Root sequence type, 2 = long sequence (139)\n        prach_RootSequenceIndex                                     = 1; // Root sequence index for PRACH\n        # SCS for msg1, can only be 15 for 30 kHz < 6 GHz, takes precendence over the one derived from prach-ConfigIndex\n        #\n        msg1_SubcarrierSpacing                                      = 1,\n# restrictedSetConfig\n# 0=unrestricted, 1=restricted type A, 2=restricted type B\n        restrictedSetConfig                                         = 0,\n\n# this is the offset between the last PRACH preamble power and the Msg3 PUSCH, 2 times the field value in dB\n        msg3_DeltaPreamble                                          = 2; // Msg3 power offset from preamble (×2 → 4 dB)\n        p0_NominalWithGrant                                         = -96; // Initial PUSCH power when grant is received\n\n# pucch-ConfigCommon setup :\n# pucchGroupHopping\n# 0 = neither, 1= group hopping, 2=sequence hopping\n        pucchGroupHopping                                           = 0; // PUCCH group hopping disabled.\n        hoppingId                                                   = 0; // hopping ID\n        p0_nominal                                                  = -96; // Initial PUCCH power.\n# ssb_PositionsInBurs_BitmapPR\n# 1=short, 2=medium, 3=long\n      ssb_PositionsInBurst_PR                                       = 2; // SSB positioning type, 2=medium.\n      ssb_PositionsInBurst_Bitmap                                   = 0x1; // Bitmap indicating SSB positions (first position enabled).\n\n# ssb_periodicityServingCell\n# 0 = ms5, 1=ms10, 2=ms20, 3=ms40, 4=ms80, 5=ms160, 6=spare2, 7=spare1\n      ssb_periodicityServingCell                                    = 2; // SSB periodicity, 2 means 20ms.\n\n# dmrs_TypeA_position\n# 0 = pos2, 1 = pos3\n      dmrs_TypeA_Position                                           = 0; // DMRS type A position, 0 = pos2\n\n# subcarrierSpacing\n# 0=kHz15, 1=kHz30, 2=kHz60, 3=kHz120\n      subcarrierSpacing                                             = 1; // Overall subcarrier spacing is 30kHz\n\n\n  #tdd-UL-DL-ConfigurationCommon\n# subcarrierSpacing\n# 0=kHz15, 1=kHz30, 2=kHz60, 3=kHz120\n      referenceSubcarrierSpacing                                    = 1; // TDD reference subcarrier spacing = 30kHz\n      # pattern1\n      # dl_UL_TransmissionPeriodicity\n      # 0=ms0p5, 1=ms0p625, 2=ms1, 3=ms1p25, 4=ms2, 5=ms2p5, 6=ms5, 7=ms10\n      dl_UL_TransmissionPeriodicity                                 = 6;  // TDD period = 5ms\n      nrofDownlinkSlots                                             = 7;  // Number of downlink slots per period\n      nrofDownlinkSymbols                                           = 6;  // Number of OFDM symbols for downlink part (last slot is partial DL)\n      nrofUplinkSlots                                               = 2;  // Number of uplink slots per period\n      nrofUplinkSymbols                                             = 4;  // Number of OFDM symbols for uplink part (first slot is partial UL)\n\n  ssPBCH_BlockPower                                                 = 10; // SS/PBCH block transmit power (dBm)\n  }\n\n  );"
+  },
+  {
+    "label": "MACRLCs",
+    "content": "MACRLCs = (\n{\n  num_cc = 1;                      // Number of supported Component Carriers (here only 1 is enabled).\n  tr_s_preference = \"local_L1\";    // Preferred transport channel between MAC and L1 (PHY), uses local IPC.\n  tr_n_preference = \"local_RRC\";   // Preferred transport channel between MAC and RRC, uses local IPC.\n  pusch_TargetSNRx10 = 300;        // Uplink PUSCH target SNR multiplied by 10 (actual 30 dB).\n  pucch_TargetSNRx10 = 230;        // Uplink PUCCH (control channel) target SNR, actual is 23 dB.\n  dl_bler_target_upper = .35;      // Upper limit of downlink BLER, MCS will be adjusted if exceeded.\n  dl_bler_target_lower = .15;      // Lower limit of downlink BLER, MCS may be increased if below.\n  ul_bler_target_upper = .35;      // Upper limit of uplink BLER.\n  ul_bler_target_lower = .15;      // Lower limit of uplink BLER.\n  pusch_FailureThres = 100;        // If uplink PUSCH repeatedly fails to this threshold, retransmission or drop may occur.\n  ul_max_mcs = 28;                 // Maximum allowed MCS level for uplink (28 means 64QAM supported).\n}\n);"
+  },
+  {
+    "label": "nb_rx",
+    "content": "nb_rx          = 2;"
+  },
+  {
+    "label": "L1_tx_thread_core",
+    "content": "L1_tx_thread_core = 10;"
+  },
+  {
+    "label": "ngap_log_level",
+    "content": "ngap_log_level                        =\"info\";"
+  },
+  {
+    "label": "phase_compensation",
+    "content": "phase_compensation = 0;"
+  },
+  {
+    "label": "nrofDownlinkSymbols",
+    "content": "nrofDownlinkSymbols                                           = 6;"
+  },
+  {
+    "label": "subcarrierSpacing",
+    "content": "subcarrierSpacing                                             = 1;"
+  },
+  {
+    "label": "pusch_FailureThres",
+    "content": "pusch_FailureThres = 100;"
+  },
+  {
+    "label": "initialDLBWPcontrolResourceSetZero",
+    "content": "initialDLBWPcontrolResourceSetZero                          = 11;"
+  },
+  {
+    "label": "ssPBCH_BlockPower",
+    "content": "ssPBCH_BlockPower                                                 = 10;"
+  },
+  {
+    "label": "prach_config",
+    "content": "prach_config = {\n      eAxC_offset = 2;  // eAxC offset indicating which channel PRACH starts from.\n    };"
+  },
+  {
+    "label": "dl_subcarrierSpacing",
+    "content": "dl_subcarrierSpacing                                        = 1;"
+  },
+  {
+    "label": "dl_carrierBandwidth",
+    "content": "dl_carrierBandwidth                                         = 273;"
+  },
+  {
+    "label": "prach_msg1_FDM",
+    "content": "prach_msg1_FDM                                            = 0;"
+  },
+  {
+    "label": "hoppingId",
+    "content": "hoppingId                                                   = 0;"
+  },
+  {
+    "label": "pusch_dtx_threshold",
+    "content": "pusch_dtx_threshold = 10;"
+  },
+  {
+    "label": "NETWORK_INTERFACES",
+    "content": "NETWORK_INTERFACES :\n    {\n    GNB_IPV4_ADDRESS_FOR_NG_AMF  = \"192.168.8.43\"; // gNB IP for connecting to AMF (N2 interface, signaling plane).\n    GNB_IPV4_ADDRESS_FOR_NGU     = \"192.168.8.43\"; // gNB IP for user data transfer (N3 interface, data plane).\n    GNB_PORT_FOR_S1U             = 2152;           // S1-U port of the gNB, default is 2152 (standard GTP-U port).\n    };"
+  },
+  {
+    "label": "gNB_name",
+    "content": "gNB_name  = \"gNB-OAI\";"
+  },
+  {
+    "label": "dl_frequencyBand",
+    "content": "dl_frequencyBand                                              = 78;"
+  },
+  {
+    "label": "do_CSIRS",
+    "content": "do_CSIRS              = 1;"
+  },
+  {
+    "label": "tr_s_preference",
+    "content": "tr_s_preference = \"local_L1\";"
+  },
+  {
+    "label": "num_cc",
+    "content": "num_cc = 1;"
+  },
+  {
+    "label": "GNB_IPV4_ADDRESS_FOR_NGU",
+    "content": "GNB_IPV4_ADDRESS_FOR_NGU     = \"192.168.8.43\";"
+  },
+  {
+    "label": "dl_absoluteFrequencyPointA",
+    "content": "dl_absoluteFrequencyPointA                                    = 626772;"
+  },
+  {
+    "label": "tx_amp_backoff_dB",
+    "content": "tx_amp_backoff_dB = 20;"
+  },
+  {
+    "label": "prach_RootSequenceIndex",
+    "content": "prach_RootSequenceIndex                                     = 1;"
+  },
+  {
+    "label": "SCTP",
+    "content": "SCTP :\n    {\n        # Number of streams to use in input/output\n        SCTP_INSTREAMS  = 2; // Number of SCTP input streams, used for handling data from AMF.\n        SCTP_OUTSTREAMS = 2; // Number of SCTP output streams, used for sending data to AMF.\n    };"
+  },
+  {
+    "label": "ssb_periodicityServingCell",
+    "content": "ssb_periodicityServingCell                                    = 2;"
+  },
+  {
+    "label": "worker_cores",
+    "content": "worker_cores = (2);"
+  },
+  {
+    "label": "rlc_log_level",
+    "content": "rlc_log_level                         =\"info\";"
+  },
+  {
+    "label": "global_log_level",
+    "content": "global_log_level                      =\"info\";"
+  },
+  {
+    "label": "amf_ip_address",
+    "content": "amf_ip_address = ({ ipv4 = \"192.168.8.21\" });"
+  },
+  {
+    "label": "ra_ContentionResolutionTimer",
+    "content": "ra_ContentionResolutionTimer                                = 7;"
+  },
+  {
+    "label": "Ta4",
+    "content": "Ta4 = (0, 200);"
+  },
+  {
+    "label": "initialDLBWPlocationAndBandwidth",
+    "content": "initialDLBWPlocationAndBandwidth                             = 1099;"
+  },
+  {
+    "label": "ipv4",
+    "content": "ipv4 = \"192.168.8.21\" }); // IP address of the AMF.\n\n\n    NETWORK_INTERFACES :\n    {\n    GNB_IPV4_ADDRESS_FOR_NG_AMF  = \"192.168.8.43\";"
+  },
+  {
+    "label": "nrofUplinkSymbols",
+    "content": "nrofUplinkSymbols                                             = 4;"
+  },
+  {
+    "label": "pusch_TargetSNRx10",
+    "content": "pusch_TargetSNRx10 = 300;"
+  },
+  {
+    "label": "fh_config",
+    "content": "fh_config = ({\n\n    Tadv_cp_dl = 125;    // Advance time for downlink control plane (unit: ns).\n    T2a_cp_dl = (259, 470);"
+  },
+  {
+    "label": "T1a_cp_dl",
+    "content": "T1a_cp_dl = (258, 392);"
+  },
+  {
+    "label": "initialULBWPsubcarrierSpacing",
+    "content": "initialULBWPsubcarrierSpacing                               = 1;"
+  },
+  {
+    "label": "drb_ciphering",
+    "content": "drb_ciphering = \"yes\";"
+  },
+  {
+    "label": "att_tx",
+    "content": "att_tx         = 0;"
+  },
+  {
+    "label": "iq_width_prach",
+    "content": "iq_width_prach = 9;"
+  },
+  {
+    "label": "T1a_cp_ul",
+    "content": "T1a_cp_ul = (285, 300);"
+  },
+  {
+    "label": "sf_extension",
+    "content": "sf_extension                  = 0;"
+  },
+  {
+    "label": "nb_tx",
+    "content": "nb_tx          = 2;"
+  },
+  {
+    "label": "T2a_cp_ul",
+    "content": "T2a_cp_ul = (125, 1200);"
+  },
+  {
+    "label": "tracking_area_code",
+    "content": "tracking_area_code  =  1;"
+  },
+  {
+    "label": "ssb_perRACH_OccasionAndCB_PreamblesPerSSB",
+    "content": "ssb_perRACH_OccasionAndCB_PreamblesPerSSB                   = 15;"
+  },
+  {
+    "label": "ru_addr",
+    "content": "ru_addr = (\"10:70:fd:14:1c:10\", \"10:70:fd:14:1c:10\");"
+  },
+  {
+    "label": "att_rx",
+    "content": "att_rx         = 0;"
+  },
+  {
+    "label": "absoluteFrequencySSB",
+    "content": "absoluteFrequencySSB                                          = 630048;"
+  },
+  {
+    "label": "prach_RootSequenceIndex_PR",
+    "content": "prach_RootSequenceIndex_PR                                  = 2;"
+  },
+  {
+    "label": "do_SRS",
+    "content": "do_SRS                = 0;"
+  },
+  {
+    "label": "rrc_log_level",
+    "content": "rrc_log_level                         =\"info\";"
+  },
+  {
+    "label": "ul_subcarrierSpacing",
+    "content": "ul_subcarrierSpacing                                          = 1;"
+  },
+  {
+    "label": "prach_msg1_FrequencyStart",
+    "content": "prach_msg1_FrequencyStart                                 = 0;"
+  },
+  {
+    "label": "ciphering_algorithms",
+    "content": "ciphering_algorithms = ( \"nea0\" );"
+  }
+]
